@@ -82,18 +82,14 @@
 		044CB8222AC5C2E800429C6E /* MarvelHeros */ = {
 			isa = PBXGroup;
 			children = (
+				044CB8312AC5C2EA00429C6E /* Info.plist */,
+				044CB8582AC5D60000429C6E /* Home */,
+				044CB8572AC5D5F500429C6E /* Extensions */,
+				044CB8562AC5D5DE00429C6E /* Globals */,
 				044CB8502AC5D3AE00429C6E /* AlamoFire */,
 				044CB84B2AC5CD3A00429C6E /* Cells */,
 				044CB83C2AC5C8F100429C6E /* Model */,
 				044CB8372AC5C7F900429C6E /* Service */,
-				044CB8232AC5C2E800429C6E /* AppDelegate.swift */,
-				044CB8252AC5C2E800429C6E /* SceneDelegate.swift */,
-				044CB8272AC5C2E800429C6E /* HomeViewController.swift */,
-				044CB8292AC5C2E800429C6E /* Main.storyboard */,
-				044CB82C2AC5C2EA00429C6E /* Assets.xcassets */,
-				044CB82E2AC5C2EA00429C6E /* LaunchScreen.storyboard */,
-				044CB8312AC5C2EA00429C6E /* Info.plist */,
-				044CB8492AC5CB0000429C6E /* md5.swift */,
 			);
 			path = MarvelHeros;
 			sourceTree = "<group>";
@@ -135,6 +131,34 @@
 				044CB8512AC5D3D600429C6E /* ImageDownloader.swift */,
 			);
 			path = AlamoFire;
+			sourceTree = "<group>";
+		};
+		044CB8562AC5D5DE00429C6E /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				044CB8232AC5C2E800429C6E /* AppDelegate.swift */,
+				044CB8252AC5C2E800429C6E /* SceneDelegate.swift */,
+				044CB8292AC5C2E800429C6E /* Main.storyboard */,
+				044CB82C2AC5C2EA00429C6E /* Assets.xcassets */,
+				044CB82E2AC5C2EA00429C6E /* LaunchScreen.storyboard */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		044CB8572AC5D5F500429C6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				044CB8492AC5CB0000429C6E /* md5.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		044CB8582AC5D60000429C6E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				044CB8272AC5C2E800429C6E /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
