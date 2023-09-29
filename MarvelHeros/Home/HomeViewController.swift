@@ -70,5 +70,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCharacter = charInfo[indexPath.row] // Assuming you have an array of characters
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let characterDetailsVC = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController") as! CharacterDetailsViewController
+        characterDetailsVC.character = selectedCharacter
+        navigationController?.pushViewController(characterDetailsVC, animated: true)
+    }
     
 }
