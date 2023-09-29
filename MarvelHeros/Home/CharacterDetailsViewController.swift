@@ -12,6 +12,7 @@ class CharacterDetailsViewController: UIViewController {
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var seriesCollView: UICollectionView!
     @IBOutlet weak var comicsCollView: UICollectionView!
+    @IBOutlet weak var eventsCollView: UICollectionView!
     let imageDownloader = ImageDownloader()
     var character: Character?
     
@@ -25,6 +26,7 @@ class CharacterDetailsViewController: UIViewController {
     func setupView(){
         seriesCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
         comicsCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
+        eventsCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
         if let character = character {
             if let seriesItems = character.series?.items {
                 // Limit seriesArray to the first 3 items
@@ -36,6 +38,12 @@ class CharacterDetailsViewController: UIViewController {
                 // Limit comicsArray to the first 3 items
                 comicsArray = comicsItems // Assuming comicsArray is of type [ComicsSummary]
                 self.comicsCollView.reloadData()
+            }
+            
+            if let eventsItems = character.events?.items {
+                // Limit comicsArray to the first 3 items
+                eventsArray = eventsItems // Assuming comicsArray is of type [ComicsSummary]
+                self.eventsCollView.reloadData()
             }
             
             imageDownloader.downloadImage(from: (character.thumbnail?.url)!) { image in
@@ -65,8 +73,10 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == seriesCollView{
             return seriesArray.count
+        }else if collectionView == eventsCollView{
+            return eventsArray.count
         }else{
-            return seriesArray.count
+            return comicsArray.count
         }
     }
     
@@ -79,12 +89,17 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SeriesCollectionViewCell.identifier, for: indexPath) as! SeriesCollectionViewCell
         if collectionView == seriesCollView{
             let series = seriesArray[indexPath.row]
-        cell.seriesName.text = series.name
+            cell.seriesName.text = series.name
             return cell
-        }else{
-            let series = comicsArray[indexPath.row]
-        cell.seriesName.text = series.name
+        }else if collectionView == eventsCollView{
+            let events = eventsArray[indexPath.row]
+        cell.seriesName.text = events.name
+            return cell
+        }else if collectionView == comicsCollView{
+            let comics = comicsArray[indexPath.row]
+        cell.seriesName.text = comics.name
             return cell
         }
+        return UICollectionViewCell()
     }
 }
