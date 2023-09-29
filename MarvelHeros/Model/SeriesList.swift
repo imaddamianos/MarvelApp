@@ -9,6 +9,7 @@ import Foundation
 
 var seriesArray: [SeriesSummary] = []
 var comicsArray: [ComicsSummary] = []
+var eventsArray: [EventsSummary] = []
 
 struct SeriesList {
     
