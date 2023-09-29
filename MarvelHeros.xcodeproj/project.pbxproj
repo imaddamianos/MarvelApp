@@ -27,6 +27,12 @@
 		044CB8522AC5D3D600429C6E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CB8512AC5D3D600429C6E /* ImageDownloader.swift */; };
 		044CB8552AC5D45F00429C6E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 044CB8542AC5D45F00429C6E /* AlamofireImage */; };
 		044CB85A2AC5D74C00429C6E /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CB8592AC5D74C00429C6E /* CharacterDetailsViewController.swift */; };
+		04CF4D9A2AC6E18900F0F270 /* ComicsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4D992AC6E18900F0F270 /* ComicsList.swift */; };
+		04CF4D9C2AC6E1C600F0F270 /* ComicsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4D9B2AC6E1C600F0F270 /* ComicsSummary.swift */; };
+		04CF4D9E2AC6E32100F0F270 /* StoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4D9D2AC6E32100F0F270 /* StoryList.swift */; };
+		04CF4DA02AC6E37200F0F270 /* StorySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4D9F2AC6E37200F0F270 /* StorySummary.swift */; };
+		04CF4DA22AC6E56600F0F270 /* EventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4DA12AC6E56600F0F270 /* EventsList.swift */; };
+		04CF4DA42AC6E5DB00F0F270 /* EventsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4DA32AC6E5DB00F0F270 /* EventsSummary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +57,12 @@
 		044CB84D2AC5CD6D00429C6E /* ThumbCharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbCharacterTableViewCell.xib; sourceTree = "<group>"; };
 		044CB8512AC5D3D600429C6E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		044CB8592AC5D74C00429C6E /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		04CF4D992AC6E18900F0F270 /* ComicsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsList.swift; sourceTree = "<group>"; };
+		04CF4D9B2AC6E1C600F0F270 /* ComicsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsSummary.swift; sourceTree = "<group>"; };
+		04CF4D9D2AC6E32100F0F270 /* StoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryList.swift; sourceTree = "<group>"; };
+		04CF4D9F2AC6E37200F0F270 /* StorySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySummary.swift; sourceTree = "<group>"; };
+		04CF4DA12AC6E56600F0F270 /* EventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsList.swift; sourceTree = "<group>"; };
+		04CF4DA32AC6E5DB00F0F270 /* EventsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +126,12 @@
 				044CB8432AC5CA7000429C6E /* Image.swift */,
 				044CB8452AC5CA9500429C6E /* SeriesList.swift */,
 				044CB8472AC5CACA00429C6E /* SeriesSummary.swift */,
+				04CF4D992AC6E18900F0F270 /* ComicsList.swift */,
+				04CF4D9B2AC6E1C600F0F270 /* ComicsSummary.swift */,
+				04CF4D9D2AC6E32100F0F270 /* StoryList.swift */,
+				04CF4D9F2AC6E37200F0F270 /* StorySummary.swift */,
+				04CF4DA12AC6E56600F0F270 /* EventsList.swift */,
+				04CF4DA32AC6E5DB00F0F270 /* EventsSummary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,11 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CF4DA22AC6E56600F0F270 /* EventsList.swift in Sources */,
 				044CB8282AC5C2E800429C6E /* HomeViewController.swift in Sources */,
 				044CB8482AC5CACA00429C6E /* SeriesSummary.swift in Sources */,
 				044CB85A2AC5D74C00429C6E /* CharacterDetailsViewController.swift in Sources */,
+				04CF4D9E2AC6E32100F0F270 /* StoryList.swift in Sources */,
 				044CB8442AC5CA7000429C6E /* Image.swift in Sources */,
 				044CB8462AC5CA9500429C6E /* SeriesList.swift in Sources */,
+				04CF4D9A2AC6E18900F0F270 /* ComicsList.swift in Sources */,
+				04CF4D9C2AC6E1C600F0F270 /* ComicsSummary.swift in Sources */,
+				04CF4DA42AC6E5DB00F0F270 /* EventsSummary.swift in Sources */,
 				044CB8242AC5C2E800429C6E /* AppDelegate.swift in Sources */,
 				044CB8262AC5C2E800429C6E /* SceneDelegate.swift in Sources */,
 				044CB84A2AC5CB0000429C6E /* md5.swift in Sources */,
@@ -256,6 +279,7 @@
 				044CB8392AC5C81200429C6E /* MarvelAPI.swift in Sources */,
 				044CB83B2AC5C83700429C6E /* MVLHeroesService.swift in Sources */,
 				044CB8422AC5C9D100429C6E /* Character.swift in Sources */,
+				04CF4DA02AC6E37200F0F270 /* StorySummary.swift in Sources */,
 				044CB84E2AC5CD6D00429C6E /* ThumbCharacterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
