@@ -12,7 +12,7 @@ struct ComicsList {
     let available: Int?
     let returned: Int?
     let collectionURI: String?
-    let items: [SeriesSummary]?
+    let items: [ComicsSummary]?
     
     enum CodingKeys: String, CodingKey {
         case available
@@ -28,7 +28,7 @@ extension ComicsList: Decodable {
         self.available = try container.decodeIfPresent(Int.self, forKey: .available)
         self.returned = try container.decodeIfPresent(Int.self, forKey: .returned)
         self.collectionURI = try container.decodeIfPresent(String.self, forKey: .collectionURI)
-        self.items = try container.decodeIfPresent([SeriesSummary].self, forKey: .items)
+        self.items = try container.decodeIfPresent([ComicsSummary].self, forKey: .items)
     }
 }
 

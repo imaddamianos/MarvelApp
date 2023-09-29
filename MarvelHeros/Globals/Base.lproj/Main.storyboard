@@ -107,6 +107,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tnw-eb-jdB" id="Iuv-GM-Q87"/>
+                                    <outlet property="delegate" destination="Tnw-eb-jdB" id="J0U-Hz-2a3"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zka-LA-12i">
                                 <rect key="frame" x="0.0" y="418.66666666666669" width="393" height="20.333333333333314"/>
@@ -135,6 +139,7 @@
                     <connections>
                         <outlet property="characterImg" destination="kJ2-DZ-iJm" id="yqJ-8f-abr"/>
                         <outlet property="characterName" destination="kQy-HV-Y5S" id="muQ-7u-LNp"/>
+                        <outlet property="comicsCollView" destination="HU8-dh-tIe" id="P13-ZJ-VEg"/>
                         <outlet property="seriesCollView" destination="Gn5-OM-Z1X" id="kih-2G-lAH"/>
                     </connections>
                 </viewController>
