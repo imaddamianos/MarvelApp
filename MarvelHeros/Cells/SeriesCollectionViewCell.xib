@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SeriesCollectionViewCell" customModule="MarvelHeros" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="256"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="289" height="256"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iru-bj-WpC">
+                        <rect key="frame" x="0.0" y="0.0" width="289" height="256"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-OJ-eqy">
+                                <rect key="frame" x="10" y="10" width="269" height="236"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vIR-OJ-eqy" secondAttribute="bottom" constant="10" id="0yR-7F-diw"/>
+                            <constraint firstAttribute="trailing" secondItem="vIR-OJ-eqy" secondAttribute="trailing" constant="10" id="CiE-lY-pUs"/>
+                            <constraint firstItem="vIR-OJ-eqy" firstAttribute="leading" secondItem="Iru-bj-WpC" secondAttribute="leading" constant="10" id="l5x-20-zHg"/>
+                            <constraint firstItem="vIR-OJ-eqy" firstAttribute="top" secondItem="Iru-bj-WpC" secondAttribute="top" constant="10" id="sct-08-nNQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Iru-bj-WpC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Mum-6S-gwD"/>
+                <constraint firstAttribute="bottom" secondItem="Iru-bj-WpC" secondAttribute="bottom" id="QTp-3X-lcz"/>
+                <constraint firstAttribute="trailing" secondItem="Iru-bj-WpC" secondAttribute="trailing" id="RK6-5b-icj"/>
+                <constraint firstItem="Iru-bj-WpC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ScY-75-9AM"/>
+            </constraints>
+            <size key="customSize" width="289" height="256"/>
+            <connections>
+                <outlet property="seriesName" destination="vIR-OJ-eqy" id="ByC-6L-3H5"/>
+            </connections>
+            <point key="canvasLocation" x="251.14503816793894" y="59.859154929577471"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -7,6 +7,8 @@
 
 import Foundation
 
+var seriesArray: [SeriesSummary] = []
+
 struct SeriesList {
     
     let available: Int?
