@@ -33,6 +33,8 @@
 		04CF4DA02AC6E37200F0F270 /* StorySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4D9F2AC6E37200F0F270 /* StorySummary.swift */; };
 		04CF4DA22AC6E56600F0F270 /* EventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4DA12AC6E56600F0F270 /* EventsList.swift */; };
 		04CF4DA42AC6E5DB00F0F270 /* EventsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4DA32AC6E5DB00F0F270 /* EventsSummary.swift */; };
+		04CF4DAD2AC728BB00F0F270 /* SeriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4DAB2AC728BB00F0F270 /* SeriesCollectionViewCell.swift */; };
+		04CF4DAE2AC728BB00F0F270 /* SeriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF4DAC2AC728BB00F0F270 /* SeriesCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		04CF4D9F2AC6E37200F0F270 /* StorySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySummary.swift; sourceTree = "<group>"; };
 		04CF4DA12AC6E56600F0F270 /* EventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsList.swift; sourceTree = "<group>"; };
 		04CF4DA32AC6E5DB00F0F270 /* EventsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSummary.swift; sourceTree = "<group>"; };
+		04CF4DAB2AC728BB00F0F270 /* SeriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		04CF4DAC2AC728BB00F0F270 /* SeriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			children = (
 				044CB84C2AC5CD6D00429C6E /* ThumbCharacterTableViewCell.swift */,
 				044CB84D2AC5CD6D00429C6E /* ThumbCharacterTableViewCell.xib */,
+				04CF4DAB2AC728BB00F0F270 /* SeriesCollectionViewCell.swift */,
+				04CF4DAC2AC728BB00F0F270 /* SeriesCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 			files = (
 				044CB84F2AC5CD6D00429C6E /* ThumbCharacterTableViewCell.xib in Resources */,
 				044CB8302AC5C2EA00429C6E /* LaunchScreen.storyboard in Resources */,
+				04CF4DAE2AC728BB00F0F270 /* SeriesCollectionViewCell.xib in Resources */,
 				044CB82D2AC5C2EA00429C6E /* Assets.xcassets in Resources */,
 				044CB82B2AC5C2E800429C6E /* Main.storyboard in Resources */,
 			);
@@ -273,6 +280,7 @@
 				044CB8242AC5C2E800429C6E /* AppDelegate.swift in Sources */,
 				044CB8262AC5C2E800429C6E /* SceneDelegate.swift in Sources */,
 				044CB84A2AC5CB0000429C6E /* md5.swift in Sources */,
+				04CF4DAD2AC728BB00F0F270 /* SeriesCollectionViewCell.swift in Sources */,
 				044CB83E2AC5C91100429C6E /* CharacterDataWrapper.swift in Sources */,
 				044CB8402AC5C97C00429C6E /* CharacterDataContainer.swift in Sources */,
 				044CB8522AC5D3D600429C6E /* ImageDownloader.swift in Sources */,
