@@ -55,7 +55,7 @@ class CharacterDetailsViewController: UIViewController {
                     // Handle the downloaded image
                     DispatchQueue.main.async {
                         self.characterImg.image = image
-                        self.characterName.text = character.name
+                        self.characterName.text = "Name: \(String(describing: character.name!)), id: \(String(describing: character.id!))"
                     }
                 } else {
                     // Handle the case where image download failed
