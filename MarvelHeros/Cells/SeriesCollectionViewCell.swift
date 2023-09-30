@@ -12,6 +12,7 @@ class SeriesCollectionViewCell: UICollectionViewCell {
     class var identifier: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
     
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var seriesName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

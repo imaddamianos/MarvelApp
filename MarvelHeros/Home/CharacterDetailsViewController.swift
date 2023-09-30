@@ -122,18 +122,22 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
         if collectionView == seriesCollView{
             let series = seriesArray[indexPath.row]
             cell.seriesName.text = series.name
+            cell.cellView.backgroundColor = UIColor.systemYellow
             return cell
         }else if collectionView == eventsCollView{
             let events = eventsArray[indexPath.row]
-        cell.seriesName.text = events.name
+            cell.seriesName.text = events.name
+            cell.cellView.backgroundColor = UIColor.systemIndigo
             return cell
         }else if collectionView == comicsCollView{
             let comics = comicsArray[indexPath.row]
-        cell.seriesName.text = comics.name
+            cell.seriesName.text = comics.name
+            cell.cellView.backgroundColor = UIColor.systemRed
             return cell
         }else if collectionView == storiesCollView{
             let stories = storiesArray[indexPath.row]
-        cell.seriesName.text = stories.name
+            cell.seriesName.text = stories.name
+            cell.cellView.backgroundColor = UIColor.systemGreen
             return cell
         }
         return UICollectionViewCell()
