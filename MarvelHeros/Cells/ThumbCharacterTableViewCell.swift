@@ -16,11 +16,9 @@ class ThumbCharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var charNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Background
-        self.backgroundColor = .clear
         
-        // Title
-        self.charNameLbl.textColor = .black
+        self.backgroundColor = .clear
+        self.charNameLbl.textColor = .systemRed
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

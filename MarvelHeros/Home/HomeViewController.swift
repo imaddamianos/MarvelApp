@@ -54,6 +54,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 DispatchQueue.main.async {
                     // Update the UI with the downloaded image
                     cell.charImg.image = image
+                    cell.charImg.layer.cornerRadius = cell.charImg.layer.frame.height/2
                 }
             } else {
                 // Handle the case where image download failed

@@ -16,19 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BLZ-mF-qna">
-                                <rect key="frame" x="20" y="118" width="353" height="700"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BLZ-mF-qna">
+                                <rect key="frame" x="20" y="251" width="353" height="567"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="UbQ-ry-gPO"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fOX-wL-aMC"/>
                                 </connections>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvellogo" translatesAutoresizingMaskIntoConstraints="NO" id="3vr-Ow-NJq">
+                                <rect key="frame" x="20" y="103" width="353" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YdU-Rp-pYT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BLZ-mF-qna" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="3IQ-Hi-PZG"/>
+                            <constraint firstItem="3vr-Ow-NJq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9kB-WI-zFd"/>
+                            <constraint firstItem="3vr-Ow-NJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OAG-bz-12x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3vr-Ow-NJq" secondAttribute="trailing" constant="20" id="PpI-SD-05g"/>
+                            <constraint firstItem="BLZ-mF-qna" firstAttribute="top" secondItem="3vr-Ow-NJq" secondAttribute="bottom" constant="20" id="m2C-K9-Ktf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BLZ-mF-qna" secondAttribute="bottom" id="mzC-jR-kNa"/>
                             <constraint firstItem="BLZ-mF-qna" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qd5-2F-kG5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BLZ-mF-qna" secondAttribute="trailing" constant="20" id="wDq-tj-Nm3"/>
@@ -230,6 +239,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="marvellogo" width="354" height="142"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
