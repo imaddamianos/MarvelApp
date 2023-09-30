@@ -13,6 +13,7 @@ class CharacterDetailsViewController: UIViewController {
     @IBOutlet weak var seriesCollView: UICollectionView!
     @IBOutlet weak var comicsCollView: UICollectionView!
     @IBOutlet weak var eventsCollView: UICollectionView!
+    @IBOutlet weak var storiesCollView: UICollectionView!
     let imageDownloader = ImageDownloader()
     var character: Character?
     
@@ -27,23 +28,26 @@ class CharacterDetailsViewController: UIViewController {
         seriesCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
         comicsCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
         eventsCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
+        storiesCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
         if let character = character {
             if let seriesItems = character.series?.items {
-                // Limit seriesArray to the first 3 items
                 seriesArray = Array(seriesItems.prefix(3))
                 self.seriesCollView.reloadData()
             }
             
             if let comicsItems = character.comics?.items {
-                // Limit comicsArray to the first 3 items
-                comicsArray = comicsItems // Assuming comicsArray is of type [ComicsSummary]
+                comicsArray = Array(comicsItems.prefix(3))
                 self.comicsCollView.reloadData()
             }
             
             if let eventsItems = character.events?.items {
-                // Limit comicsArray to the first 3 items
-                eventsArray = eventsItems // Assuming comicsArray is of type [ComicsSummary]
+                eventsArray = Array(eventsItems.prefix(3))
                 self.eventsCollView.reloadData()
+            }
+            
+            if let storiesItems = character.stories?.items {
+                storiesArray = Array(storiesItems.prefix(3))
+                self.storiesCollView.reloadData()
             }
             
             imageDownloader.downloadImage(from: (character.thumbnail?.url)!) { image in
@@ -75,8 +79,10 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
             return seriesArray.count
         }else if collectionView == eventsCollView{
             return eventsArray.count
-        }else{
+        }else if collectionView == comicsCollView{
             return comicsArray.count
+        }else{
+            return storiesArray.count
         }
     }
     
@@ -98,6 +104,10 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
         }else if collectionView == comicsCollView{
             let comics = comicsArray[indexPath.row]
         cell.seriesName.text = comics.name
+            return cell
+        }else if collectionView == storiesCollView{
+            let stories = comicsArray[indexPath.row]
+        cell.seriesName.text = stories.name
             return cell
         }
         return UICollectionViewCell()
