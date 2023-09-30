@@ -14,6 +14,10 @@ class CharacterDetailsViewController: UIViewController {
     @IBOutlet weak var comicsCollView: UICollectionView!
     @IBOutlet weak var eventsCollView: UICollectionView!
     @IBOutlet weak var storiesCollView: UICollectionView!
+    @IBOutlet weak var seriesLbl: UILabel!
+    @IBOutlet weak var comicsLbl: UILabel!
+    @IBOutlet weak var eventsLbl: UILabel!
+    @IBOutlet weak var storiesLbl: UILabel!
     let imageDownloader = ImageDownloader()
     var character: Character?
     
@@ -32,22 +36,44 @@ class CharacterDetailsViewController: UIViewController {
         if let character = character {
             if let seriesItems = character.series?.items {
                 seriesArray = Array(seriesItems.prefix(3))
-                self.seriesCollView.reloadData()
+                if !seriesArray.isEmpty{
+                    self.comicsCollView.reloadData()
+                }else{
+                    seriesCollView.isHidden = true
+                    seriesLbl.isHidden = true
+                }
             }
             
             if let comicsItems = character.comics?.items {
                 comicsArray = Array(comicsItems.prefix(3))
-                self.comicsCollView.reloadData()
+                if !comicsArray.isEmpty{
+                    self.comicsCollView.reloadData()
+                }else{
+                    comicsCollView.isHidden = true
+                    comicsLbl.isHidden = true
+                }
+                
             }
             
             if let eventsItems = character.events?.items {
                 eventsArray = Array(eventsItems.prefix(3))
-                self.eventsCollView.reloadData()
+                if !eventsArray.isEmpty{
+                    self.eventsCollView.reloadData()
+                }else{
+                    eventsCollView.isHidden = true
+                    eventsLbl.isHidden = true
+                }
             }
             
             if let storiesItems = character.stories?.items {
                 storiesArray = Array(storiesItems.prefix(3))
-                self.storiesCollView.reloadData()
+                if !storiesArray.isEmpty{
+                    self.storiesCollView.reloadData()
+                }else{
+                    storiesCollView.isHidden = true
+                    storiesLbl.isHidden = true
+                }
+
             }
             
             imageDownloader.downloadImage(from: (character.thumbnail?.url)!) { image in
@@ -106,7 +132,7 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
         cell.seriesName.text = comics.name
             return cell
         }else if collectionView == storiesCollView{
-            let stories = comicsArray[indexPath.row]
+            let stories = storiesArray[indexPath.row]
         cell.seriesName.text = stories.name
             return cell
         }
