@@ -45,6 +45,7 @@
             </constraints>
             <size key="customSize" width="289" height="256"/>
             <connections>
+                <outlet property="cellView" destination="Iru-bj-WpC" id="YfS-aJ-KPe"/>
                 <outlet property="seriesName" destination="vIR-OJ-eqy" id="ByC-6L-3H5"/>
             </connections>
             <point key="canvasLocation" x="251.14503816793894" y="59.859154929577471"/>
