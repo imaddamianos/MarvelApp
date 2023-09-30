@@ -29,6 +29,7 @@ class CharacterDetailsViewController: UIViewController {
     }
     
     func setupView(){
+        characterImg.layer.cornerRadius = 15
         seriesCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
         comicsCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
         eventsCollView.register(SeriesCollectionViewCell.nib, forCellWithReuseIdentifier: SeriesCollectionViewCell.identifier)
