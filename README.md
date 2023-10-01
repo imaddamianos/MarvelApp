@@ -9,10 +9,6 @@ The Marvel Heroes iOS App is an application that allows users to explore a datab
 - Search for characters by name.
 - Navigate between character details and the character list.
 
-## Getting Started
-
-To get started with the Marvel Heroes iOS App project, follow these steps:
-
 ### Prerequisites
 
 - Xcode: Make sure you have Xcode installed on your Mac.
@@ -20,6 +16,13 @@ To get started with the Marvel Heroes iOS App project, follow these steps:
 ### Installation
 
 1. Clone the repository to your local machine:
-
-   ```bash
    git clone https://github.com/imaddamianos/marvelHeroes.git
+   
+## Getting Started
+
+To get started with the Marvel Heroes iOS App project, follow these steps:
+- Open the project after downloading
+- If the alamofire image package didn't load do the following :
+      In Xcode, go to "File" > "Swift Packages" > "Add Package Dependency..."
+      Enter the repository URL for AlamofireImage: https://github.com/Alamofire/AlamofireImage.git
+      Follow the prompts to add AlamofireImage to your project.
