@@ -24,14 +24,26 @@ class HomeViewController: UIViewController {
         // Register TableView Cell
         self.charactersTableView.register(ThumbCharacterTableViewCell.nib, forCellReuseIdentifier: ThumbCharacterTableViewCell.identifier)
         showloader()
+        
+        // Retrieving data
+        if let characterData = UserDefaults.standard.data(forKey: "cachedCharacters"),
+           let cachedCharacters = try? JSONDecoder().decode([Character].self, from: characterData) {
+            self.charInfo = cachedCharacters
+        }
+        
         marvelAPI.characterService.getAllCharacters { characters, error in
             if let characters = characters {
                 // Handle the retrieved characters
                 print(characters)
                 self.charInfo = characters
+                
+                // Caching data
+                let characterData = try? JSONEncoder().encode(characters)
+                UserDefaults.standard.set(characterData, forKey: "cachedCharacters")
             } else if let error = error {
                 // Handle the error
                 print("Error retrieving characters: \(error)")
+                
             }
             DispatchQueue.main.async {
                 self.hideloader()
