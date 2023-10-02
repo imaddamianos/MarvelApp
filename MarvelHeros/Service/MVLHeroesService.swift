@@ -73,11 +73,6 @@ class MVLCharacterService {
                 completion(.failure(NSError(domain: "", code: 000, userInfo: ["message": "Can't get data"])))
                 return
             }
-
-//            guard let characterData = try? JSONDecoder().decode(CharacterDataWrapper.self, from: data) else {
-//                completion(.failure(NSError(domain: "", code: 000, userInfo: ["message": "Can't parse json"])))
-//                return
-//            }
             
             guard let characterData = try? JSONDecoder().decode(CharacterDataWrapper.self, from: data) else {
                 completion(.failure(NSError(domain: "", code: 000, userInfo: ["message": "Can't parse json"])))

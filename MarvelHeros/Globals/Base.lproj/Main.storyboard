@@ -38,6 +38,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="qrE-6X-SlS"/>
                                 </connections>
                             </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-RS-Jgz">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" systemColor="systemRedColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -46,6 +50,8 @@
                             <constraint firstItem="3vr-Ow-NJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OAG-bz-12x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3vr-Ow-NJq" secondAttribute="trailing" constant="20" id="PpI-SD-05g"/>
                             <constraint firstItem="IfN-fT-Kvj" firstAttribute="top" secondItem="3vr-Ow-NJq" secondAttribute="bottom" constant="5" id="SCh-Uq-Ef7"/>
+                            <constraint firstItem="h2U-RS-Jgz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uz7-TG-WaX"/>
+                            <constraint firstItem="h2U-RS-Jgz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gLd-cB-mXV"/>
                             <constraint firstItem="BLZ-mF-qna" firstAttribute="top" secondItem="IfN-fT-Kvj" secondAttribute="bottom" constant="5" id="l36-yr-ERJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BLZ-mF-qna" secondAttribute="bottom" id="mzC-jR-kNa"/>
                             <constraint firstItem="BLZ-mF-qna" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qd5-2F-kG5"/>
@@ -56,6 +62,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BUE-e7-prx"/>
                     <connections>
+                        <outlet property="activityLoader" destination="h2U-RS-Jgz" id="TF1-hd-vey"/>
                         <outlet property="charactersTableView" destination="BLZ-mF-qna" id="kux-8v-oXw"/>
                         <outlet property="searchBar" destination="IfN-fT-Kvj" id="d8x-Wu-zyw"/>
                     </connections>

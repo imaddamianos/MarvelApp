@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var charactersTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var activityLoader: UIActivityIndicatorView!
     let marvelAPI = MarvelAPI.shared
     var charInfo: [Character] = []
     var filteredCharacters: [Character] = []
@@ -22,7 +23,7 @@ class HomeViewController: UIViewController {
         
         // Register TableView Cell
         self.charactersTableView.register(ThumbCharacterTableViewCell.nib, forCellReuseIdentifier: ThumbCharacterTableViewCell.identifier)
-        
+        showloader()
         marvelAPI.characterService.getAllCharacters { characters, error in
             if let characters = characters {
                 // Handle the retrieved characters
@@ -33,7 +34,7 @@ class HomeViewController: UIViewController {
                 print("Error retrieving characters: \(error)")
             }
             DispatchQueue.main.async {
-                //                // Update TableView with the data
+                self.hideloader()
                 self.charactersTableView.reloadData()
             }
         }
@@ -82,6 +83,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         let characterDetailsVC = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController") as! CharacterDetailsViewController
         characterDetailsVC.character = selectedCharacter
         navigationController?.pushViewController(characterDetailsVC, animated: true)
+    }
+    
+    func showloader(){
+        activityLoader.startAnimating()
+        activityLoader.isHidden = false
+    }
+    
+    func hideloader(){
+        activityLoader.stopAnimating()
+        activityLoader.isHidden = true
     }
 
 }
